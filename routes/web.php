@@ -36,3 +36,10 @@ Route::get('/why', function () {
 Route::get('/admin', function () {
     return view('layout/admin');
 });
+
+Route::get('/login', function () {
+    return view('layout/login');
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
